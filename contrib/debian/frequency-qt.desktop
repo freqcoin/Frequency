@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Frequency
+Comment=Frequency P2P Cryptocurrency
+Comment[fr]=Frequency, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Frequency, eşten eşe kriptografik sanal para birimi
+Exec=frequency-qt %u
+Terminal=false
+Type=Application
+Icon=frequency128
+MimeType=x-scheme-handler/frequency;
+Categories=Office;Finance;

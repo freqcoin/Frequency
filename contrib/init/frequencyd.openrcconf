@@ -1,0 +1,26 @@
+# /etc/conf.d/frequencyd: config file for /etc/init.d/frequencyd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/frequency/frequency.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/frequencyd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/frequencyd.pid"
+
+# Where to write frequencyd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/frequencyd"
+
+# User and group to own frequencyd process
+#BITCOIND_USER="frequency"
+#BITCOIND_GROUP="frequency"
+
+# Path to frequencyd executable
+#BITCOIND_BIN="/usr/bin/frequencyd"
+
+# Nice value to run frequencyd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

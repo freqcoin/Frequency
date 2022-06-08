@@ -1,0 +1,26 @@
+[Unit]
+Description=FREQUENCY's distributed currency daemon
+After=network.target
+
+[Service]
+User=frequency
+Group=frequency
+
+Type=forking
+PIDFile=/var/lib/frequencyd/frequencyd.pid
+
+ExecStart=/usr/bin/frequencyd -daemon -pid=/var/lib/frequencyd/frequencyd.pid \
+          -conf=/etc/frequency/frequency.conf -datadir=/var/lib/frequencyd
+
+ExecStop=-/usr/bin/frequency-cli -conf=/etc/frequency/frequency.conf \
+         -datadir=/var/lib/frequencyd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
